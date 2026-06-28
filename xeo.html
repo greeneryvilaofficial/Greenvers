@@ -106,6 +106,32 @@
     <p>Booking lebih murah langsung ke owner tanpa aplikasi. Chat sekarang buat cek tanggal kosong.</p>
     <p><strong>WhatsApp:</strong> <a href="https://wa.me/628+6282343487310">+082343487310</a><br>
     <strong>Alamat:</strong> Jalan Kolonel Masturi KM 9, Desa Karyawangi, Kecamatan Parongpong, Kabupaten Bandung Barat, Jawa Barat Kode Pos 40559</p>
+   
+<button id="playBtn" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background:#D4AF37; color:#000; border:none; padding:12px; border-radius:50px; font-weight:bold;">
+  🔊 Geeenery
+</button>
 
+<audio id="bgMusic" loop>
+  <source src="suaravilla.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const btn = document.getElementById('playBtn');
+  let isPlaying = false;
+
+  music.volume = 0.2; //
+
+  btn.addEventListener('click', () => {
+    if (isPlaying) {
+      music.pause();
+      btn.innerHTML = '🔊 Suara Villa';
+    } else {
+      music.play();
+      btn.innerHTML = '🔇 Stop Suara';
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
 </body>
 </html>
