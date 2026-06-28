@@ -1479,35 +1479,6 @@ document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
 // Init
 renderCalendar();
 updateSummary();
-<script>
-(function() {
-  var audio = document.getElementById('bgMusic');
-  var btn   = document.getElementById('musicBtn');
-  var started = false;
-  audio.volume = 0.35;
-
-  function startMusic() {
-    if (started) return;
-    started = true;
-    audio.play().then(function() {
-      btn.classList.add('playing');
-    }).catch(function() {});
-  }
-
-  ['click','touchstart','keydown','scroll'].forEach(function(ev) {
-    document.addEventListener(ev, startMusic, { once: true, passive: true });
-  });
-
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    if (audio.paused) {
-      audio.play().then(function() { btn.classList.add('playing'); started = true; }).catch(function(){});
-    } else {
-      audio.pause();
-      btn.classList.remove('playing');
-    }
-  });
-})();
 </script>
 </body>
 </html>
