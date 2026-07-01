@@ -175,6 +175,7 @@
   opacity: 0; pointer-events: none; transition: opacity .2s;
 }
 #musicBtn:hover .music-tip { opacity: 1; }
+.prayer-overlay{position:fixed;inset:0;z-index:980;background:rgba(5,15,8,.8);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;}.prayer-overlay.show{opacity:1;pointer-events:all;}.prayer-box{background:linear-gradient(160deg,#1e4a32 0%,#0f2218 100%);border:1px solid rgba(126,217,138,.35);border-radius:28px;padding:44px 36px;max-width:380px;width:100%;text-align:center;transform:scale(.88);transition:transform .35s cubic-bezier(.34,1.56,.64,1);box-shadow:0 20px 60px rgba(0,0,0,.5);}.prayer-overlay.show .prayer-box{transform:scale(1);}.prayer-box-icon{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:rgba(126,217,138,.14);border:1.5px solid rgba(126,217,138,.4);display:flex;align-items:center;justify-content:center;font-size:30px;animation:prayerPop .4s ease both;}@keyframes prayerPop{from{transform:scale(0) rotate(-15deg)}to{transform:scale(1) rotate(0)}}.prayer-box-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}.prayer-box-title{font-family:var(--heading);font-size:28px;font-weight:800;color:#fff;letter-spacing:-.01em;margin-bottom:10px;}.prayer-box-msg{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:26px;}.prayer-box-time{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.4);margin-bottom:22px;letter-spacing:.06em;}.prayer-box-close{display:inline-block;padding:13px 34px;border-radius:100px;border:none;background:linear-gradient(135deg,#7ED98A 0%,#2B8C5B 100%);color:#0a1f14;font-family:var(--font);font-size:14px;font-weight:800;cursor:pointer;transition:opacity .2s,transform .18s;}.prayer-box-close:hover{opacity:.9;transform:translateY(-1px);}
 </style>
 </head>
 <body> <nav> <div class="container"> <div class="nav-inner"> <a href="#" class="nav-logo"> <div class="nav-logo-icon"><img src="data:image/webp;base64,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" alt="Greenery Villa Logo"></div> <div> <div class="nav-logo-sub">Greenvers</div> <div class="nav-logo-name">Greenery Villa</div> </div> </a> <ul class="nav-links"> <li><a href="#villas">Villa</a></li> <li><a href="#fasilitas">Fasilitas</a></li> <li><a href="#galeri">Galeri</a></li> <li><a href="#ulasan">Ulasan</a></li> <li><a href="#booking">Booking</a></li> </ul> <div style="display:flex;align-items:center;gap:12px;"> <a href="#booking" class="nav-cta">Amankan Tanggalmu</a> <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button> </div> </div> </div>
@@ -726,6 +727,114 @@ updateSummary();</script>
   <svg class="icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
   <svg class="icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
 </button>
+
+<!-- Popup Pengingat Shalat -->
+<div class="prayer-overlay" id="prayerOverlay">
+  <div class="prayer-box">
+    <div class="prayer-box-icon">🕌</div>
+    <div class="prayer-box-eyebrow">Pengingat</div>
+    <h3 class="prayer-box-title" id="prayerBoxTitle">Waktu Dzuhur telah tiba</h3>
+    <p class="prayer-box-msg">Yuk sempatkan shalat dulu, tamu Greenery Villa 🌿</p>
+    <div class="prayer-box-time" id="prayerBoxTime"></div>
+    <button class="prayer-box-close" id="prayerBoxClose">Baik, Terima Kasih</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ==== Pengingat Waktu Shalat (popup saja, tanpa suara adzan) ====
+  var PRAYER_NAMES = { Fajr: 'Subuh', Dhuhr: 'Dzuhur', Asr: 'Ashar', Maghrib: 'Maghrib', Isha: 'Isya' };
+  var DEFAULT_COORDS = { lat: -6.9175, lon: 107.6191 }; // fallback: Bandung
+  var overlayEl = document.getElementById('prayerOverlay');
+  var titleEl = document.getElementById('prayerBoxTitle');
+  var timeEl = document.getElementById('prayerBoxTime');
+  var closeBtn = document.getElementById('prayerBoxClose');
+  var hideTimer = null;
+
+  function showPrayerToast(key, hhmm) {
+    var todayStr = new Date().toDateString();
+    var shownKey = 'prayerShown_' + key + '_' + todayStr;
+    if (localStorage.getItem(shownKey)) return;
+    localStorage.setItem(shownKey, '1');
+
+    var namaWaktu = PRAYER_NAMES[key] || key;
+    titleEl.textContent = 'Waktu ' + namaWaktu + ' telah tiba';
+    timeEl.textContent = 'Masuk pukul ' + hhmm + ' waktu setempat';
+    overlayEl.classList.add('show');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(function() { overlayEl.classList.remove('show'); }, 20000);
+  }
+
+  closeBtn.addEventListener('click', function() {
+    overlayEl.classList.remove('show');
+    clearTimeout(hideTimer);
+  });
+  overlayEl.addEventListener('click', function(e) {
+    if (e.target === overlayEl) {
+      overlayEl.classList.remove('show');
+      clearTimeout(hideTimer);
+    }
+  });
+
+  function fetchPrayerTimes(lat, lon) {
+    var today = new Date();
+    var dateStr = ('0' + today.getDate()).slice(-2) + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + today.getFullYear();
+    var url = 'https://api.aladhan.com/v1/timings/' + dateStr + '?latitude=' + lat + '&longitude=' + lon + '&method=20';
+    fetch(url).then(function(r) { return r.json(); }).then(function(data) {
+      if (!data || !data.data || !data.data.timings) return;
+      var timings = data.data.timings;
+      var schedule = {};
+      Object.keys(PRAYER_NAMES).forEach(function(key) {
+        if (timings[key]) schedule[key] = timings[key].substring(0, 5);
+      });
+      localStorage.setItem('prayerSchedule', JSON.stringify({ date: today.toDateString(), schedule: schedule }));
+      checkPrayerTime(schedule);
+    }).catch(function() {});
+  }
+
+  function checkPrayerTime(schedule) {
+    var now = new Date();
+    var nowStr = ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+    Object.keys(schedule).forEach(function(key) {
+      if (schedule[key] === nowStr) showPrayerToast(key, schedule[key]);
+    });
+  }
+
+  function getTodaySchedule() {
+    try {
+      var cached = JSON.parse(localStorage.getItem('prayerSchedule') || 'null');
+      if (cached && cached.date === new Date().toDateString()) return cached.schedule;
+    } catch (e) {}
+    return null;
+  }
+
+  function initPrayerReminder() {
+    var cached = getTodaySchedule();
+    if (cached) {
+      checkPrayerTime(cached);
+    } else if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        fetchPrayerTimes(pos.coords.latitude, pos.coords.longitude);
+      }, function() {
+        fetchPrayerTimes(DEFAULT_COORDS.lat, DEFAULT_COORDS.lon);
+      }, { timeout: 5000 });
+    } else {
+      fetchPrayerTimes(DEFAULT_COORDS.lat, DEFAULT_COORDS.lon);
+    }
+
+    setInterval(function() {
+      var sched = getTodaySchedule();
+      if (sched) {
+        checkPrayerTime(sched);
+      } else {
+        fetchPrayerTimes(DEFAULT_COORDS.lat, DEFAULT_COORDS.lon);
+      }
+    }, 60000);
+  }
+
+  initPrayerReminder();
+})();
+</script>
 
 <script>
 (function() {
